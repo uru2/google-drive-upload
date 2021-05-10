@@ -120,7 +120,6 @@ _check_connection() {
 
 #### Documentation
 - Web documentation for the script is now maintained in `hugo-docs` branch.
-
 - To update documentation you could create a worktree for `hugo-docs` branch  within your working directory.
 
   ```shell
@@ -128,23 +127,14 @@ _check_connection() {
   cd hugo-docs/
   git checkout -b <new-branch-name>
   ```
-
 - The documentation can be found under `content` directory in `hugo-docs` branch.
-
 - Update the necessary markdowns within the subsections.
-
 - Ensure to update the `lastmod` timestamp at the top of the markdown file which you are updating.
-
 - Refrain from making unnecessary newlines or whitespace.
-
 - Use pure markdown, html is not accepted within the hugo markdown files.
-
 - If you are adding a new section, then make sure to create a folder and add `_index.md` file.
-
 - Last but not the least, use proper intendation, if possible, use a markdown linter.
-
 - Once you are happy with the changes, commit the changes within `hugo-docs` directory and raise a PR to `hugo-docs` branch.
-
 - Github pages will be automatically updated by Github actions once your changes are merged to `hugo-docs` branch.
 
 #### Script Code
