@@ -8,11 +8,12 @@
 <a href="https://www.codacy.com/manual/labbots/google-drive-upload?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=labbots/google-drive-upload&amp;utm_campaign=Badge_Grade"><img alt="Codacy grade" src="https://img.shields.io/codacy/grade/55b1591a28af473886c8dfdb3f2c9123?style=for-the-badge"></a>
 <a href="https://github.com/labbots/google-drive-upload/actions"><img alt="Github Action Checks" src="https://img.shields.io/github/workflow/status/labbots/google-drive-upload/Checks?label=CI%20Checks&style=for-the-badge"></a>
 </p>
-</p>
 <p align="center">
 <a href="https://plant.treeware.earth/labbots/google-drive-upload"><img alt="Buy us a tree" src="https://img.shields.io/treeware/trees/labbots/google-drive-upload?color=green&label=Buy%20us%20a%20Tree%20%F0%9F%8C%B3&style=for-the-badge"></a>
 </p>
-
+<p align="center">
+<img src="https://labbots.github.io/google-drive-upload/images/banner.png" height="150"/>
+</p>
 > Google drive upload is a collection of shell scripts runnable on all POSIX compatible shells ( sh / ksh / dash / bash / zsh / etc ).
 >
 > It utilizes google drive api v3 and google OAuth2.0 to generate access tokens and to authorize application for uploading files/folders to your google drive.
@@ -36,7 +37,6 @@
   - Can be per-user and invoked per-shell, hence no root access required or global install with root access.
 - An additional sync script for background synchronisation jobs. Read [Synchronisation](#synchronisation) section for more info.
 
-Installation and Usage documentation is now available at [https://labbots.github.io/google-drive-upload/](https://labbots.github.io/google-drive-upload/)
 ## Table of Contents
 
 - [Compatibility](#compatibility)
