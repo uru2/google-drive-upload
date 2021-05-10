@@ -36,6 +36,7 @@
   - Can be per-user and invoked per-shell, hence no root access required or global install with root access.
 - An additional sync script for background synchronisation jobs. Read [Synchronisation](#synchronisation) section for more info.
 
+Installation and Usage documentation is now available at [https://labbots.github.io/google-drive-upload/](https://labbots.github.io/google-drive-upload/)
 ## Table of Contents
 
 - [Compatibility](#compatibility)
