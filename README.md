@@ -15,9 +15,9 @@
 <img src="https://labbots.github.io/google-drive-upload/images/banner.png" height="150"/>
 </p>
 
-> Google drive upload is a collection of shell scripts runnable on all POSIX compatible shells ( sh / ksh / dash / bash / zsh / etc ).
->
-> It utilizes google drive api v3 and google OAuth2.0 to generate access tokens and to authorize application for uploading files/folders to your google drive.
+Google drive upload is a collection of shell scripts runnable on all POSIX compatible shells ( sh / ksh / dash / bash / zsh / etc ).
+
+It utilizes google drive api v3 and google OAuth2.0 to generate access tokens and to authorize application for uploading files/folders to your google drive.
 
 - Minimal
 - Upload or Update files/folders
