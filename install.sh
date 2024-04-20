@@ -336,7 +336,7 @@ _variables() {
 _download_file() {
     cd "${INSTALL_PATH}" 2>| /dev/null 1>&2 || exit 1
     # make the file writable if present
-    [ -f "${INSTALL_PATH}/${COMMAND_NAME}" ] && chmod u+w -- "${INSTALL_PATH}/${COMMAND_NAME}"
+    [ -f "${INSTALL_PATH}/${COMMAND_NAME}" ] && chmod -- u+w "${INSTALL_PATH}/${COMMAND_NAME}"
     _print_center "justify" "${COMMAND_NAME}" "-"
     # now download the binary
     if script_download_file="$(curl -Ls --compressed "https://github.com/${REPO}/raw/${LATEST_CURRENT_SHA}/release/${INSTALLATION:-}/gupload")"; then
@@ -350,7 +350,7 @@ _download_file() {
 
     [ -n "${SKIP_SYNC}" ] && return 0
     # make the file writable if present
-    [ -f "${INSTALL_PATH}/${SYNC_COMMAND_NAME}" ] && chmod u+w -- "${INSTALL_PATH}/${SYNC_COMMAND_NAME}"
+    [ -f "${INSTALL_PATH}/${SYNC_COMMAND_NAME}" ] && chmod -- u+w "${INSTALL_PATH}/${SYNC_COMMAND_NAME}"
     _print_center "justify" "${SYNC_COMMAND_NAME}" "-"
     # now download the binary
     if script_download_file="$(curl -Ls --compressed "https://github.com/${REPO}/raw/${LATEST_CURRENT_SHA}/release/${INSTALLATION:-}/gsync")"; then
@@ -418,8 +418,8 @@ _start() {
             exit 1
         fi
 
-        chmod "a-w-r-x,${PERM_MODE:-u}+x+r" -- "${INSTALL_PATH}/${COMMAND_NAME}"
-        chmod "a-w-r-x,${PERM_MODE:-u}+x+r" -- "${INSTALL_PATH}/${SYNC_COMMAND_NAME}"
+        chmod -- "a-w-r-x,${PERM_MODE:-u}+x+r" "${INSTALL_PATH}/${COMMAND_NAME}"
+        chmod -- "a-w-r-x,${PERM_MODE:-u}+x+r" "${INSTALL_PATH}/${SYNC_COMMAND_NAME}"
 
         for _ in 1 2; do _clear_line 1; done
 
@@ -465,11 +465,11 @@ _start() {
 _uninstall() {
     _print_center "justify" "Uninstalling.." "-"
 
-    chmod -f u+w -- "${INSTALL_PATH}/${COMMAND_NAME}"
+    chmod -f -- u+w "${INSTALL_PATH}/${COMMAND_NAME}"
     rm -f -- "${INSTALL_PATH:?}/${COMMAND_NAME:?}"
 
     [ -z "${SKIP_SYNC}" ] && command -v "${SYNC_COMMAND_NAME}" 2>| /dev/null 1>&2 && {
-        chmod -f u+w -- "${INSTALL_PATH}/${SYNC_COMMAND_NAME}"
+        chmod -f -- u+w "${INSTALL_PATH}/${SYNC_COMMAND_NAME}"
         rm -f -- "${INSTALL_PATH:?}/${SYNC_COMMAND_NAME:?}"
     }
 
