@@ -73,8 +73,8 @@ _clone_file() {
     if [ "${job_clone_file}" = update ]; then
         unset file_check_json_clone_file check_value_type_clone_file check_value_clone_file
         case "${CHECK_MODE}" in
-            2) check_value_type_clone_file="size" check_value_clone_file="${size_clone_file}" ;;
-            3) check_value_type_clone_file="md5Checksum" check_value_clone_file="${md5_clone_file}" ;;
+            2) check_value_type_clone_file="size" && check_value_clone_file="${size_clone_file}" ;;
+            3) check_value_type_clone_file="md5Checksum" && check_value_clone_file="${md5_clone_file}" ;;
             *) : ;;
         esac
         # Check if file actually exists.
@@ -249,7 +249,7 @@ _upload_file() {
     [ "${job_upload_file}" = update ] && {
         unset file_check_json_upload_file check_value_upload_file
         case "${CHECK_MODE}" in
-            2) check_value_type_upload_file="size" check_value_upload_file="${inputsize_upload_file}" ;;
+            2) check_value_type_upload_file="size" && check_value_upload_file="${inputsize_upload_file}" ;;
             3)
                 check_value_type_upload_file="md5Checksum"
                 check_value_upload_file="$(md5sum "${input_upload_file}")" || {

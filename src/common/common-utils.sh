@@ -235,8 +235,8 @@ _parse_config() {
 
         # trim the first and last qoute if present on both sides
         case "${val}" in
-            \"*\") val="${val#\"}" val="${val%\"}" ;;
-            \'*\') val="${val#\'}" val="${val%\'}" ;;
+            \"*\") val="${val#\"}" && val="${val%\"}" ;;
+            \'*\') val="${val#\'}" && val="${val%\'}" ;;
             *) : ;;
         esac
 
